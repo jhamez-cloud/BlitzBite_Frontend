@@ -1,0 +1,66 @@
+import type { Wallet } from "@/types"
+
+export const wallet: Wallet = {
+  balance: 120.5,
+  currency: "GHS",
+  promotionalCredits: 15,
+  rewardPoints: 340,
+  transactions: [
+    {
+      id: 1,
+      type: "debit",
+      description: "Order #1001 - Burger House",
+      amount: -188,
+      date: "2026-07-03",
+      reference: "TXN-20260703-001",
+    },
+    {
+      id: 2,
+      type: "credit",
+      description: "Wallet Top-Up",
+      amount: 100,
+      date: "2026-07-01",
+      reference: "TXN-20260701-001",
+    },
+    {
+      id: 3,
+      type: "refund",
+      description: "Refund - Order #1005 Cancelled",
+      amount: 86,
+      date: "2026-06-28",
+      reference: "TXN-20260628-002",
+    },
+    {
+      id: 4,
+      type: "debit",
+      description: "Order #1004 - Pizza Palace",
+      amount: -150,
+      date: "2026-06-30",
+      reference: "TXN-20260630-001",
+    },
+    {
+      id: 5,
+      type: "reward",
+      description: "Reward points converted",
+      amount: 20,
+      date: "2026-06-25",
+      reference: "TXN-20260625-001",
+    },
+    {
+      id: 6,
+      type: "credit",
+      description: "Wallet Top-Up",
+      amount: 200,
+      date: "2026-06-20",
+      reference: "TXN-20260620-001",
+    },
+    {
+      id: 7,
+      type: "debit",
+      description: "Order #1002 - Mama's Kitchen",
+      amount: -98,
+      date: "2026-07-02",
+      reference: "TXN-20260702-001",
+    },
+  ],
+}
