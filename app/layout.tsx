@@ -1,15 +1,29 @@
-import { Geist, Geist_Mono, Montserrat } from "next/font/google"
+import type { Metadata } from "next"
+import { Montserrat, Geist_Mono } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { CartProvider } from "@/hooks/use-cart"
+import { cn } from "@/lib/utils"
+import { SITE_NAME, SITE_DESCRIPTION } from "@/constants/site"
 
-const montserrat = Montserrat({subsets:['latin'],variable:'--font-sans'})
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const metadata: Metadata = {
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+}
 
 export default function RootLayout({
   children,
@@ -20,10 +34,17 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", montserrat.variable)}
+      className={cn(
+        "antialiased",
+        fontMono.variable,
+        "font-sans",
+        montserrat.variable
+      )}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <CartProvider>{children}</CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
