@@ -7,9 +7,7 @@ export async function getMenuByRestaurant(
   return menuItems.filter((m) => m.restaurantId === restaurantId)
 }
 
-export async function getMenuItem(
-  id: number
-): Promise<MenuItem | undefined> {
+export async function getMenuItem(id: number): Promise<MenuItem | undefined> {
   return menuItems.find((m) => m.id === id)
 }
 
