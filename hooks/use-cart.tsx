@@ -86,12 +86,9 @@ const CartContext = createContext<CartContextValue | null>(null)
 export function CartProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(cartReducer, { items: [] })
 
-  const addItem = useCallback(
-    (item: Omit<CartItem, "id">) => {
-      dispatch({ type: "ADD_ITEM", payload: item })
-    },
-    []
-  )
+  const addItem = useCallback((item: Omit<CartItem, "id">) => {
+    dispatch({ type: "ADD_ITEM", payload: item })
+  }, [])
 
   const removeItem = useCallback((id: string) => {
     dispatch({ type: "REMOVE_ITEM", payload: { id } })
@@ -101,15 +98,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
     dispatch({ type: "UPDATE_QUANTITY", payload: { id, quantity } })
   }, [])
 
-  const updateInstructions = useCallback(
-    (id: string, instructions: string) => {
-      dispatch({
-        type: "UPDATE_INSTRUCTIONS",
-        payload: { id, instructions },
-      })
-    },
-    []
-  )
+  const updateInstructions = useCallback((id: string, instructions: string) => {
+    dispatch({
+      type: "UPDATE_INSTRUCTIONS",
+      payload: { id, instructions },
+    })
+  }, [])
 
   const clearCart = useCallback(() => {
     dispatch({ type: "CLEAR_CART" })
@@ -126,17 +120,18 @@ export function CartProvider({ children }: { children: ReactNode }) {
   )
 
   return (
-    <CartContext.Provider 
-        value={{
-          items: state.items,
-          addItem,
-          removeItem,
-          updateQuantity,
-          updateInstructions,
-          clearCart,
-          itemCount,
-          subtotal
-    }}>
+    <CartContext.Provider
+      value={{
+        items: state.items,
+        addItem,
+        removeItem,
+        updateQuantity,
+        updateInstructions,
+        clearCart,
+        itemCount,
+        subtotal,
+      }}
+    >
       {children}
     </CartContext.Provider>
   )
