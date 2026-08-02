@@ -74,7 +74,8 @@ export const notifications: Notification[] = [
     id: 8,
     type: "system",
     title: "Wallet Top-Up Successful",
-    message: "₵100 has been added to your BlitzBite wallet. Current balance: ₵120.50.",
+    message:
+      "₵100 has been added to your BlitzBite wallet. Current balance: ₵120.50.",
     time: "1 week ago",
     isRead: true,
     actionUrl: "/wallet",

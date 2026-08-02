@@ -5,77 +5,92 @@ export const reviews: Review[] = [
     id: 1,
     userId: 1,
     userName: "Ama Serwaa",
-    userAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+    userAvatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
     restaurantId: 1,
     rating: 5,
-    comment: "Best burgers in Accra! The double beef burger is absolutely incredible. Delivery was fast too.",
+    comment:
+      "Best burgers in Accra! The double beef burger is absolutely incredible. Delivery was fast too.",
     date: "2 days ago",
   },
   {
     id: 2,
     userId: 2,
     userName: "Kofi Asante",
-    userAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+    userAvatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
     restaurantId: 1,
     rating: 4,
-    comment: "Great food, slightly delayed delivery but the quality made up for it.",
+    comment:
+      "Great food, slightly delayed delivery but the quality made up for it.",
     date: "5 days ago",
   },
   {
     id: 3,
     userId: 3,
     userName: "Efua Mensah",
-    userAvatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+    userAvatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
     restaurantId: 2,
     rating: 5,
-    comment: "The jollof rice tastes just like home! Mama's Kitchen never disappoints.",
+    comment:
+      "The jollof rice tastes just like home! Mama's Kitchen never disappoints.",
     date: "1 day ago",
   },
   {
     id: 4,
     userId: 4,
     userName: "Kwaku Boateng",
-    userAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
+    userAvatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
     restaurantId: 2,
     rating: 4,
-    comment: "Waakye was excellent. Love the generous portions. Will order again.",
+    comment:
+      "Waakye was excellent. Love the generous portions. Will order again.",
     date: "1 week ago",
   },
   {
     id: 5,
     userId: 5,
     userName: "Akosua Darko",
-    userAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop",
+    userAvatar:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop",
     restaurantId: 3,
     rating: 5,
-    comment: "Pizza Palace has the closest thing to authentic Italian pizza I've found in Ghana.",
+    comment:
+      "Pizza Palace has the closest thing to authentic Italian pizza I've found in Ghana.",
     date: "3 days ago",
   },
   {
     id: 6,
     userId: 6,
     userName: "Yaw Adjei",
-    userAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+    userAvatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
     restaurantId: 5,
     rating: 5,
-    comment: "Shawarma King is the real deal. Fresh ingredients and perfect seasoning every time.",
+    comment:
+      "Shawarma King is the real deal. Fresh ingredients and perfect seasoning every time.",
     date: "4 days ago",
   },
   {
     id: 7,
     userId: 7,
     userName: "Abena Owusu",
-    userAvatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop",
+    userAvatar:
+      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop",
     restaurantId: 9,
     rating: 5,
-    comment: "The banku and tilapia here is outstanding. Best I've ever had off the beach.",
+    comment:
+      "The banku and tilapia here is outstanding. Best I've ever had off the beach.",
     date: "6 days ago",
   },
   {
     id: 8,
     userId: 8,
     userName: "Nana Agyeman",
-    userAvatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop",
+    userAvatar:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop",
     restaurantId: 6,
     rating: 4,
     comment: "Chocolate lava cake was divine. Could eat it every day!",
@@ -85,20 +100,24 @@ export const reviews: Review[] = [
     id: 9,
     userId: 9,
     userName: "Adjoa Appiah",
-    userAvatar: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&h=100&fit=crop",
+    userAvatar:
+      "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&h=100&fit=crop",
     restaurantId: 8,
     rating: 5,
-    comment: "Green Bowl is my go-to for healthy meals. The Mediterranean bowl is perfection.",
+    comment:
+      "Green Bowl is my go-to for healthy meals. The Mediterranean bowl is perfection.",
     date: "2 days ago",
   },
   {
     id: 10,
     userId: 10,
     userName: "Kwesi Annan",
-    userAvatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&h=100&fit=crop",
+    userAvatar:
+      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&h=100&fit=crop",
     restaurantId: 4,
     rating: 3,
-    comment: "Food was decent but packaging could be better. The fried rice was good though.",
+    comment:
+      "Food was decent but packaging could be better. The fried rice was good though.",
     date: "2 weeks ago",
   },
 ]

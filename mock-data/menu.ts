@@ -6,9 +6,11 @@ export const menuItems: MenuItem[] = [
     id: 1,
     restaurantId: 1,
     name: "Double Beef Burger",
-    description: "Juicy grilled beef patties with melted cheese, lettuce, and special sauce",
+    description:
+      "Juicy grilled beef patties with melted cheese, lettuce, and special sauce",
     price: 75,
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
     category: "Popular",
     available: true,
     calories: 650,
@@ -25,7 +27,8 @@ export const menuItems: MenuItem[] = [
     name: "Classic Cheeseburger",
     description: "Single beef patty with cheddar cheese and fresh vegetables",
     price: 50,
-    image: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop",
     category: "Burgers",
     available: true,
     calories: 480,
@@ -41,7 +44,8 @@ export const menuItems: MenuItem[] = [
     name: "Chicken Burger",
     description: "Crispy fried chicken with coleslaw and honey mustard",
     price: 55,
-    image: "https://images.unsplash.com/photo-1615297928064-24977384d0da?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1615297928064-24977384d0da?w=400&h=300&fit=crop",
     category: "Burgers",
     available: true,
     calories: 520,
@@ -55,31 +59,31 @@ export const menuItems: MenuItem[] = [
     id: 4,
     restaurantId: 1,
     name: "Loaded Fries",
-    description: "Crispy fries topped with cheese sauce, bacon, and spring onions",
+    description:
+      "Crispy fries topped with cheese sauce, bacon, and spring onions",
     price: 35,
-    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop",
     category: "Sides",
     available: true,
     calories: 380,
     isPopular: false,
-    addons: [
-      { id: 7, name: "Extra Cheese Sauce", price: 8 },
-    ],
+    addons: [{ id: 7, name: "Extra Cheese Sauce", price: 8 }],
   },
   {
     id: 5,
     restaurantId: 1,
     name: "Milkshake",
-    description: "Thick and creamy milkshake in chocolate, vanilla, or strawberry",
+    description:
+      "Thick and creamy milkshake in chocolate, vanilla, or strawberry",
     price: 25,
-    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop",
     category: "Drinks",
     available: true,
     calories: 340,
     isPopular: false,
-    addons: [
-      { id: 8, name: "Whipped Cream", price: 5 },
-    ],
+    addons: [{ id: 8, name: "Whipped Cream", price: 5 }],
   },
 
   // Mama's Kitchen (restaurantId: 2)
@@ -87,9 +91,11 @@ export const menuItems: MenuItem[] = [
     id: 6,
     restaurantId: 2,
     name: "Jollof Rice & Chicken",
-    description: "Aromatic jollof rice served with perfectly seasoned grilled chicken",
+    description:
+      "Aromatic jollof rice served with perfectly seasoned grilled chicken",
     price: 60,
-    image: "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=300&fit=crop",
     category: "Popular",
     available: true,
     calories: 580,
@@ -104,9 +110,11 @@ export const menuItems: MenuItem[] = [
     id: 7,
     restaurantId: 2,
     name: "Waakye Special",
-    description: "Rice and beans with stew, shito, spaghetti, and protein of choice",
+    description:
+      "Rice and beans with stew, shito, spaghetti, and protein of choice",
     price: 45,
-    image: "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=400&h=300&fit=crop",
     category: "Local Favorites",
     available: true,
     calories: 620,
@@ -123,7 +131,8 @@ export const menuItems: MenuItem[] = [
     name: "Fufu & Light Soup",
     description: "Smooth pounded fufu with rich light soup and choice of meat",
     price: 55,
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop",
     category: "Local Favorites",
     available: true,
     calories: 500,
@@ -139,7 +148,8 @@ export const menuItems: MenuItem[] = [
     name: "Kelewele",
     description: "Spicy fried ripe plantain cubes with roasted peanuts",
     price: 20,
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop",
     category: "Sides",
     available: true,
     calories: 280,
@@ -152,9 +162,11 @@ export const menuItems: MenuItem[] = [
     id: 10,
     restaurantId: 3,
     name: "Margherita Pizza",
-    description: "Classic tomato sauce, fresh mozzarella, and basil on wood-fired crust",
+    description:
+      "Classic tomato sauce, fresh mozzarella, and basil on wood-fired crust",
     price: 85,
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop",
     category: "Popular",
     available: true,
     calories: 720,
@@ -170,7 +182,8 @@ export const menuItems: MenuItem[] = [
     name: "Pepperoni Supreme",
     description: "Loaded with pepperoni, bell peppers, and Italian seasoning",
     price: 95,
-    image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop",
     category: "Pizzas",
     available: true,
     calories: 850,
@@ -184,16 +197,16 @@ export const menuItems: MenuItem[] = [
     id: 12,
     restaurantId: 3,
     name: "BBQ Chicken Pizza",
-    description: "Smoky BBQ sauce with grilled chicken, red onions, and cilantro",
+    description:
+      "Smoky BBQ sauce with grilled chicken, red onions, and cilantro",
     price: 90,
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
     category: "Pizzas",
     available: true,
     calories: 780,
     isPopular: false,
-    addons: [
-      { id: 17, name: "Extra Cheese", price: 15 },
-    ],
+    addons: [{ id: 17, name: "Extra Cheese", price: 15 }],
   },
   {
     id: 13,
@@ -201,7 +214,8 @@ export const menuItems: MenuItem[] = [
     name: "Garlic Bread",
     description: "Toasted bread with garlic butter and herbs",
     price: 25,
-    image: "https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?w=400&h=300&fit=crop",
     category: "Sides",
     available: true,
     calories: 280,
@@ -214,9 +228,11 @@ export const menuItems: MenuItem[] = [
     id: 14,
     restaurantId: 5,
     name: "Chicken Shawarma Wrap",
-    description: "Marinated chicken with garlic sauce, pickles, and fresh veggies in warm pita",
+    description:
+      "Marinated chicken with garlic sauce, pickles, and fresh veggies in warm pita",
     price: 45,
-    image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=400&h=300&fit=crop",
     category: "Popular",
     available: true,
     calories: 520,
@@ -231,9 +247,11 @@ export const menuItems: MenuItem[] = [
     id: 15,
     restaurantId: 5,
     name: "Beef Shawarma Plate",
-    description: "Tender beef shawarma served on a bed of rice with hummus and salad",
+    description:
+      "Tender beef shawarma served on a bed of rice with hummus and salad",
     price: 65,
-    image: "https://images.unsplash.com/photo-1561758033-7e924f619b47?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1561758033-7e924f619b47?w=400&h=300&fit=crop",
     category: "Plates",
     available: true,
     calories: 680,
@@ -247,16 +265,16 @@ export const menuItems: MenuItem[] = [
     id: 16,
     restaurantId: 5,
     name: "Falafel Wrap",
-    description: "Crispy falafel balls with tahini, fresh veggies, and pickled turnips",
+    description:
+      "Crispy falafel balls with tahini, fresh veggies, and pickled turnips",
     price: 35,
-    image: "https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?w=400&h=300&fit=crop",
     category: "Wraps",
     available: true,
     calories: 420,
     isPopular: false,
-    addons: [
-      { id: 22, name: "Cheese", price: 10 },
-    ],
+    addons: [{ id: 22, name: "Cheese", price: 10 }],
   },
 
   // Sweet Tooth Bakery (restaurantId: 6)
@@ -264,24 +282,26 @@ export const menuItems: MenuItem[] = [
     id: 17,
     restaurantId: 6,
     name: "Chocolate Lava Cake",
-    description: "Warm chocolate cake with a molten chocolate center, served with vanilla ice cream",
+    description:
+      "Warm chocolate cake with a molten chocolate center, served with vanilla ice cream",
     price: 45,
-    image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop",
     category: "Popular",
     available: true,
     calories: 520,
     isPopular: true,
-    addons: [
-      { id: 26, name: "Extra Ice Cream", price: 10 },
-    ],
+    addons: [{ id: 26, name: "Extra Ice Cream", price: 10 }],
   },
   {
     id: 18,
     restaurantId: 6,
     name: "Croissant",
-    description: "Buttery, flaky French-style croissant, baked fresh every morning",
+    description:
+      "Buttery, flaky French-style croissant, baked fresh every morning",
     price: 18,
-    image: "https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=400&h=300&fit=crop",
     category: "Pastries",
     available: true,
     calories: 280,
@@ -297,7 +317,8 @@ export const menuItems: MenuItem[] = [
     name: "Red Velvet Cupcake",
     description: "Moist red velvet cupcake topped with cream cheese frosting",
     price: 22,
-    image: "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&h=300&fit=crop",
     category: "Cupcakes",
     available: false,
     calories: 320,
@@ -310,9 +331,11 @@ export const menuItems: MenuItem[] = [
     id: 20,
     restaurantId: 8,
     name: "Mediterranean Bowl",
-    description: "Quinoa, chickpeas, roasted vegetables, feta, and lemon tahini dressing",
+    description:
+      "Quinoa, chickpeas, roasted vegetables, feta, and lemon tahini dressing",
     price: 55,
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
     category: "Popular",
     available: true,
     calories: 420,
@@ -326,9 +349,11 @@ export const menuItems: MenuItem[] = [
     id: 21,
     restaurantId: 8,
     name: "Açaí Bowl",
-    description: "Açaí blended with banana, topped with granola, berries, and honey",
+    description:
+      "Açaí blended with banana, topped with granola, berries, and honey",
     price: 50,
-    image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=300&fit=crop",
     category: "Bowls",
     available: true,
     calories: 380,
@@ -344,9 +369,11 @@ export const menuItems: MenuItem[] = [
     id: 22,
     restaurantId: 9,
     name: "Banku & Grilled Tilapia",
-    description: "Traditional banku with perfectly grilled tilapia, pepper sauce, and shito",
+    description:
+      "Traditional banku with perfectly grilled tilapia, pepper sauce, and shito",
     price: 70,
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop",
     category: "Popular",
     available: true,
     calories: 600,
@@ -360,16 +387,16 @@ export const menuItems: MenuItem[] = [
     id: 23,
     restaurantId: 9,
     name: "Kenkey & Fried Fish",
-    description: "Fermented corn dough served with fried fish and hot pepper sauce",
+    description:
+      "Fermented corn dough served with fried fish and hot pepper sauce",
     price: 50,
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop",
     category: "Local Favorites",
     available: true,
     calories: 550,
     isPopular: false,
-    addons: [
-      { id: 35, name: "Extra Fish", price: 25 },
-    ],
+    addons: [{ id: 35, name: "Extra Fish", price: 25 }],
   },
 
   // Smoothie Factory (restaurantId: 10)
@@ -379,7 +406,8 @@ export const menuItems: MenuItem[] = [
     name: "Tropical Paradise Smoothie",
     description: "Mango, pineapple, coconut milk, and passion fruit blend",
     price: 30,
-    image: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=400&h=300&fit=crop",
     category: "Popular",
     available: true,
     calories: 220,
@@ -395,14 +423,13 @@ export const menuItems: MenuItem[] = [
     name: "Green Detox Juice",
     description: "Cucumber, kale, apple, ginger, and lemon cold-pressed juice",
     price: 28,
-    image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=400&h=300&fit=crop",
     category: "Juices",
     available: true,
     calories: 120,
     isPopular: false,
-    addons: [
-      { id: 38, name: "Turmeric Shot", price: 8 },
-    ],
+    addons: [{ id: 38, name: "Turmeric Shot", price: 8 }],
   },
   {
     id: 26,
@@ -410,14 +437,13 @@ export const menuItems: MenuItem[] = [
     name: "Berry Blast Smoothie",
     description: "Mixed berries, banana, Greek yogurt, and honey",
     price: 32,
-    image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=400&h=300&fit=crop",
     category: "Smoothies",
     available: true,
     calories: 260,
     isPopular: true,
-    addons: [
-      { id: 36, name: "Protein Powder", price: 10 },
-    ],
+    addons: [{ id: 36, name: "Protein Powder", price: 10 }],
   },
 
   // Dragon Wok (restaurantId: 4)
@@ -425,9 +451,11 @@ export const menuItems: MenuItem[] = [
     id: 27,
     restaurantId: 4,
     name: "Sweet & Sour Chicken",
-    description: "Crispy chicken pieces in a tangy sweet and sour sauce with bell peppers",
+    description:
+      "Crispy chicken pieces in a tangy sweet and sour sauce with bell peppers",
     price: 60,
-    image: "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=400&h=300&fit=crop",
     category: "Popular",
     available: true,
     calories: 580,
@@ -441,16 +469,16 @@ export const menuItems: MenuItem[] = [
     id: 28,
     restaurantId: 4,
     name: "Beef Chow Mein",
-    description: "Wok-fried noodles with tender beef strips and mixed vegetables",
+    description:
+      "Wok-fried noodles with tender beef strips and mixed vegetables",
     price: 55,
-    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=300&fit=crop",
     category: "Noodles",
     available: true,
     calories: 520,
     isPopular: false,
-    addons: [
-      { id: 41, name: "Extra Vegetables", price: 8 },
-    ],
+    addons: [{ id: 41, name: "Extra Vegetables", price: 8 }],
   },
   {
     id: 29,
@@ -458,14 +486,13 @@ export const menuItems: MenuItem[] = [
     name: "Fried Rice Special",
     description: "Egg fried rice with shrimp, chicken, and mixed vegetables",
     price: 50,
-    image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop",
     category: "Rice",
     available: true,
     calories: 540,
     isPopular: true,
-    addons: [
-      { id: 42, name: "Extra Shrimp", price: 20 },
-    ],
+    addons: [{ id: 42, name: "Extra Shrimp", price: 20 }],
   },
 
   // Chick Republic (restaurantId: 7)
@@ -475,7 +502,8 @@ export const menuItems: MenuItem[] = [
     name: "Spicy Fried Chicken (3pc)",
     description: "Extra crispy fried chicken with signature spicy coating",
     price: 55,
-    image: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&h=300&fit=crop",
     category: "Popular",
     available: true,
     calories: 680,
@@ -491,13 +519,12 @@ export const menuItems: MenuItem[] = [
     name: "Grilled Wings (6pc)",
     description: "Juicy grilled chicken wings with BBQ or peri-peri sauce",
     price: 45,
-    image: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400&h=300&fit=crop",
     category: "Wings",
     available: true,
     calories: 520,
     isPopular: false,
-    addons: [
-      { id: 45, name: "Extra Sauce", price: 5 },
-    ],
+    addons: [{ id: 45, name: "Extra Sauce", price: 5 }],
   },
 ]
