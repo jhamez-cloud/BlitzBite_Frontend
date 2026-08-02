@@ -2,11 +2,14 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { X, Plus, Minus } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { QuantitySelector } from "@/components/quantity-selector"
 import { useCart } from "@/hooks/use-cart"
+import { useAuth } from "@/hooks/use-auth"
+import { useToast } from "@/hooks/use-toast"
 import { formatPriceShort } from "@/constants/site"
 import type { MenuItem, Addon } from "@/types"
 
@@ -25,6 +28,9 @@ export function MenuItemModal({
   const [selectedAddons, setSelectedAddons] = useState<Addon[]>([])
   const [notes, setNotes] = useState("")
   const { addItem } = useCart()
+  const { requireAuth } = useAuth()
+  const { toast } = useToast()
+  const pathname = usePathname()
 
   const toggleAddon = (addon: Addon) => {
     setSelectedAddons((prev) =>
@@ -38,6 +44,10 @@ export function MenuItemModal({
   const itemTotal = (item.price + addonsTotal) * quantity
 
   const handleAddToCart = () => {
+    if (!requireAuth(pathname)) {
+      onClose()
+      return
+    }
     addItem({
       menuItemId: item.id,
       restaurantId,
@@ -48,6 +58,11 @@ export function MenuItemModal({
       selectedAddons,
       specialInstructions: notes || undefined,
     })
+    toast(
+      quantity > 1
+        ? `${quantity} × ${item.name} added to cart`
+        : `${item.name} added to cart`
+    )
     onClose()
   }
 
@@ -57,7 +72,7 @@ export function MenuItemModal({
         className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
-      <div className="fixed inset-x-4 bottom-4 top-auto z-50 max-h-[85vh] overflow-y-auto rounded-2xl bg-background shadow-2xl sm:inset-auto sm:left-1/2 sm:top-1/2 sm:w-full sm:max-w-lg sm:-translate-x-1/2 sm:-translate-y-1/2">
+      <div className="fixed inset-x-4 top-auto bottom-4 z-50 max-h-[85vh] overflow-y-auto rounded-2xl bg-background shadow-2xl sm:inset-auto sm:top-1/2 sm:left-1/2 sm:w-full sm:max-w-lg sm:-translate-x-1/2 sm:-translate-y-1/2">
         <div className="relative aspect-[16/10] overflow-hidden rounded-t-2xl">
           <Image
             src={item.image}
@@ -68,7 +83,7 @@ export function MenuItemModal({
           />
           <button
             onClick={onClose}
-            className="absolute right-3 top-3 flex size-8 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+            className="absolute top-3 right-3 flex size-8 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
             aria-label="Close"
           >
             <X className="size-4" />
@@ -139,7 +154,7 @@ export function MenuItemModal({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Any special requests? (e.g., no onions)"
-              className="mt-2 w-full rounded-xl border border-border bg-card px-3 py-2 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"
+              className="mt-2 w-full rounded-xl border border-border bg-card px-3 py-2 text-sm transition-colors outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
               rows={2}
             />
           </div>

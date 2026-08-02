@@ -11,6 +11,9 @@ import { CategoryChip } from "@/components/category-chip"
 import { MenuItemModal } from "@/features/restaurant-detail/menu-item-modal"
 import { formatPriceShort } from "@/constants/site"
 import { useCart } from "@/hooks/use-cart"
+import { useAuth } from "@/hooks/use-auth"
+import { useToast } from "@/hooks/use-toast"
+import { usePathname } from "next/navigation"
 import type { Restaurant, MenuItem, Review } from "@/types"
 
 interface RestaurantDetailClientProps {
@@ -30,6 +33,9 @@ export function RestaurantDetailClient({
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
   const { addItem } = useCart()
+  const { requireAuth } = useAuth()
+  const { toast } = useToast()
+  const pathname = usePathname()
 
   const menuCategories = useMemo(() => {
     const cats = [...new Set(menuItems.map((m) => m.category))]
@@ -62,7 +68,7 @@ export function RestaurantDetailClient({
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="-mt-12 relative z-10 rounded-2xl border border-border bg-card p-4 shadow-lg sm:p-6">
+        <div className="relative z-10 -mt-12 rounded-2xl border border-border bg-card p-4 shadow-lg sm:p-6">
           <div className="flex items-start gap-4">
             <div className="relative size-16 shrink-0 overflow-hidden rounded-xl border-2 border-background shadow sm:size-20">
               <Image
@@ -126,7 +132,7 @@ export function RestaurantDetailClient({
         <div className="py-6">
           {activeTab === "menu" && (
             <div>
-              <div className="mb-4 flex gap-2 overflow-x-auto pb-2 scrollbar-none">
+              <div className="mb-4 flex scrollbar-none gap-2 overflow-x-auto pb-2">
                 <CategoryChip
                   label="All"
                   isActive={!selectedCategory}
@@ -138,9 +144,7 @@ export function RestaurantDetailClient({
                     label={cat}
                     isActive={selectedCategory === cat}
                     onClick={() =>
-                      setSelectedCategory(
-                        selectedCategory === cat ? null : cat
-                      )
+                      setSelectedCategory(selectedCategory === cat ? null : cat)
                     }
                   />
                 ))}
@@ -151,7 +155,8 @@ export function RestaurantDetailClient({
                     key={item.id}
                     item={item}
                     onCardClick={() => setSelectedItem(item)}
-                    onAddToCart={() =>
+                    onAddToCart={() => {
+                      if (!requireAuth(pathname)) return
                       addItem({
                         menuItemId: item.id,
                         restaurantId: restaurant.id,
@@ -161,7 +166,8 @@ export function RestaurantDetailClient({
                         quantity: 1,
                         selectedAddons: [],
                       })
-                    }
+                      toast(`${item.name} added to cart`)
+                    }}
                   />
                 ))}
               </div>
@@ -209,10 +215,7 @@ export function RestaurantDetailClient({
                 <h3 className="font-semibold">Opening Hours</h3>
                 <div className="mt-2 space-y-1.5">
                   {restaurant.openingHours.map((h) => (
-                    <div
-                      key={h.day}
-                      className="flex justify-between text-sm"
-                    >
+                    <div key={h.day} className="flex justify-between text-sm">
                       <span className="text-muted-foreground">{h.day}</span>
                       <span>
                         {h.open} - {h.close}

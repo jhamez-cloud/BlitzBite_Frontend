@@ -63,13 +63,13 @@ export function RestaurantListingClient({
 
       <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+          <Search className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
           <input
             type="text"
             placeholder="Search restaurants..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-xl border border-border bg-card py-2.5 pl-10 pr-4 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"
+            className="w-full rounded-xl border border-border bg-card py-2.5 pr-4 pl-10 text-sm transition-colors outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
 
@@ -99,7 +99,7 @@ export function RestaurantListingClient({
         </div>
       </div>
 
-      <div className="mt-4 flex gap-2 overflow-x-auto pb-2 scrollbar-none">
+      <div className="mt-4 flex scrollbar-none gap-2 overflow-x-auto pb-2">
         <CategoryChip
           label="All"
           isActive={!selectedCategory}

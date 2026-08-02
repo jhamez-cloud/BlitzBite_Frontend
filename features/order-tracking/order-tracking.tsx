@@ -30,9 +30,7 @@ export function OrderTrackingClient({ order }: OrderTrackingClientProps) {
             <div className="flex items-center justify-between rounded-xl bg-muted/50 p-4">
               <div className="flex items-center gap-2 text-sm">
                 <Clock3 className="size-4 text-muted-foreground" />
-                <span className="text-muted-foreground">
-                  Estimated arrival
-                </span>
+                <span className="text-muted-foreground">Estimated arrival</span>
               </div>
               <span className="font-semibold">
                 {new Date(order.estimatedDelivery).toLocaleTimeString([], {
@@ -91,10 +89,7 @@ export function OrderTrackingClient({ order }: OrderTrackingClientProps) {
             <h3 className="font-semibold">Order Summary</h3>
             <div className="mt-3 space-y-2">
               {order.items.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex justify-between text-sm"
-                >
+                <div key={i} className="flex justify-between text-sm">
                   <span>
                     {item.quantity}x {item.name}
                   </span>
