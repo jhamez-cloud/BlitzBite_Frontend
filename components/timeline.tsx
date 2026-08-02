@@ -32,7 +32,7 @@ export function Timeline({ entries, className }: TimelineProps) {
               {!isLast && (
                 <div
                   className={cn(
-                    "w-0.5 flex-1 min-h-6",
+                    "min-h-6 w-0.5 flex-1",
                     entry.completed ? "bg-primary" : "bg-muted"
                   )}
                 />
@@ -42,9 +42,7 @@ export function Timeline({ entries, className }: TimelineProps) {
               <p
                 className={cn(
                   "text-sm font-medium",
-                  entry.completed
-                    ? "text-foreground"
-                    : "text-muted-foreground"
+                  entry.completed ? "text-foreground" : "text-muted-foreground"
                 )}
               >
                 {entry.label}

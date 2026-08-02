@@ -28,10 +28,7 @@ export function PromotionsCarousel({ promotions }: PromotionsCarouselProps) {
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {promotions.map((promo) => (
-              <div
-                key={promo.id}
-                className="w-full shrink-0"
-              >
+              <div key={promo.id} className="w-full shrink-0">
                 <div
                   className={cn(
                     "relative flex min-h-[200px] items-center overflow-hidden rounded-2xl bg-gradient-to-r p-6 sm:p-8",
@@ -49,12 +46,12 @@ export function PromotionsCarousel({ promotions }: PromotionsCarouselProps) {
                       {promo.description}
                     </p>
                     {promo.code && (
-                      <div className="mt-4 inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-4 py-2 text-sm font-mono font-semibold text-white">
+                      <div className="mt-4 inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-4 py-2 font-mono text-sm font-semibold text-white">
                         {promo.code}
                       </div>
                     )}
                   </div>
-                  <div className="absolute -right-8 -top-8 size-48 opacity-20">
+                  <div className="absolute -top-8 -right-8 size-48 opacity-20">
                     <Image
                       src={promo.image}
                       alt=""
@@ -72,7 +69,7 @@ export function PromotionsCarousel({ promotions }: PromotionsCarouselProps) {
         <Button
           variant="outline"
           size="icon-sm"
-          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-background/80 shadow-lg backdrop-blur-sm"
+          className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-background/80 shadow-lg backdrop-blur-sm"
           onClick={prev}
           aria-label="Previous promotion"
         >
@@ -81,7 +78,7 @@ export function PromotionsCarousel({ promotions }: PromotionsCarouselProps) {
         <Button
           variant="outline"
           size="icon-sm"
-          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-background/80 shadow-lg backdrop-blur-sm"
+          className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-background/80 shadow-lg backdrop-blur-sm"
           onClick={next}
           aria-label="Next promotion"
         >
@@ -95,7 +92,9 @@ export function PromotionsCarousel({ promotions }: PromotionsCarouselProps) {
               onClick={() => setCurrent(i)}
               className={cn(
                 "h-1.5 rounded-full transition-all",
-                i === current ? "w-6 bg-primary" : "w-1.5 bg-muted-foreground/30"
+                i === current
+                  ? "w-6 bg-primary"
+                  : "w-1.5 bg-muted-foreground/30"
               )}
               aria-label={`Go to promotion ${i + 1}`}
             />

@@ -2,13 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import {
-  Search,
-  ShoppingCart,
-  Bell,
-  Menu,
-  X,
-} from "lucide-react"
+import { Search, ShoppingCart, Bell, Menu, X } from "lucide-react"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -17,6 +11,7 @@ import { SITE_NAME } from "@/constants/site"
 import { useCart } from "@/hooks/use-cart"
 import { useScroll } from "@/hooks/use-scroll"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { UserMenu } from "@/components/layout/user-menu"
 
 export function Navbar({ onCartOpen }: { onCartOpen: () => void }) {
   const pathname = usePathname()
@@ -94,6 +89,8 @@ export function Navbar({ onCartOpen }: { onCartOpen: () => void }) {
               </span>
             )}
           </Button>
+
+          <UserMenu />
 
           <Button
             variant="ghost"

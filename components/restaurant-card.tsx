@@ -37,7 +37,7 @@ export function RestaurantCard({ restaurant, className }: RestaurantCardProps) {
           </div>
         )}
         {restaurant.isFeatured && restaurant.isOpen && (
-          <span className="absolute left-3 top-3 rounded-full bg-primary px-2.5 py-0.5 text-xs font-semibold text-primary-foreground">
+          <span className="absolute top-3 left-3 rounded-full bg-primary px-2.5 py-0.5 text-xs font-semibold text-primary-foreground">
             Featured
           </span>
         )}

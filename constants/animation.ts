@@ -32,13 +32,19 @@ export const scaleIn: Variants = {
 
 export const slideInRight: Variants = {
   hidden: { x: "100%" },
-  visible: { x: 0, transition: { type: "spring", damping: 25, stiffness: 200 } },
+  visible: {
+    x: 0,
+    transition: { type: "spring", damping: 25, stiffness: 200 },
+  },
   exit: { x: "100%", transition: { duration: 0.2 } },
 }
 
 export const slideInUp: Variants = {
   hidden: { y: "100%" },
-  visible: { y: 0, transition: { type: "spring", damping: 25, stiffness: 200 } },
+  visible: {
+    y: 0,
+    transition: { type: "spring", damping: 25, stiffness: 200 },
+  },
   exit: { y: "100%", transition: { duration: 0.2 } },
 }
 

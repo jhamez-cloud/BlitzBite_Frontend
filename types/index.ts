@@ -10,6 +10,7 @@ export type {
 } from "./order"
 export type { Review, ReviewSummary, RatingBreakdown } from "./review"
 export type { User, Address, PaymentMethod, UserPreferences } from "./user"
+export type { AuthAccount, AuthUser } from "./auth"
 export type { Promotion, Coupon } from "./promotion"
 export type { Notification, NotificationType } from "./notification"
 export type { Wallet, WalletTransaction, TransactionType } from "./wallet"

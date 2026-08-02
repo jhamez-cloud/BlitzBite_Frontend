@@ -53,7 +53,7 @@ export function FoodCard({
             </div>
           )}
           {item.isPopular && item.available && (
-            <span className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-orange-500 px-2 py-0.5 text-[10px] font-semibold text-white">
+            <span className="absolute top-2 left-2 flex items-center gap-1 rounded-full bg-orange-500 px-2 py-0.5 text-[10px] font-semibold text-white">
               <Flame className="size-3" />
               Popular
             </span>
@@ -84,7 +84,7 @@ export function FoodCard({
             e.stopPropagation()
             onFavoriteToggle()
           }}
-          className="absolute right-2 top-2 flex size-8 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm transition-transform hover:scale-110 dark:bg-black/50"
+          className="absolute top-2 right-2 flex size-8 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm transition-transform hover:scale-110 dark:bg-black/50"
           aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
         >
           <Heart
@@ -99,7 +99,7 @@ export function FoodCard({
       )}
 
       {onAddToCart && item.available && (
-        <div className="absolute bottom-16 right-2">
+        <div className="absolute right-2 bottom-16">
           <Button
             size="icon-sm"
             variant="default"

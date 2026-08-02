@@ -123,9 +123,7 @@ export default function NotificationsPage() {
                     <h3
                       className={cn(
                         "text-sm",
-                        notification.isRead
-                          ? "font-medium"
-                          : "font-semibold"
+                        notification.isRead ? "font-medium" : "font-semibold"
                       )}
                     >
                       {notification.title}

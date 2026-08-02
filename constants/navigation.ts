@@ -37,7 +37,7 @@ export const profileMenuLinks = [
   { label: "My Orders", href: "/orders", icon: ClipboardList },
   { label: "Favorites", href: "/favorites", icon: Heart },
   { label: "Notifications", href: "/notifications", icon: Bell },
-  { label: "Wallet", href: "/wallet", icon: Wallet },
+  { label: "Wallet", href: "/profile", icon: Wallet },
   { label: "Coupons", href: "/coupons", icon: TicketPercent },
 ]
 
