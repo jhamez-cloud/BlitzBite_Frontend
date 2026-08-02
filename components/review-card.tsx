@@ -11,10 +11,7 @@ interface ReviewCardProps {
 export function ReviewCard({ review, className }: ReviewCardProps) {
   return (
     <div
-      className={cn(
-        "rounded-2xl border border-border bg-card p-4",
-        className
-      )}
+      className={cn("rounded-2xl border border-border bg-card p-4", className)}
     >
       <div className="flex items-start gap-3">
         <div className="relative size-10 shrink-0 overflow-hidden rounded-full">
@@ -29,9 +26,7 @@ export function ReviewCard({ review, className }: ReviewCardProps) {
         <div className="min-w-0 flex-1">
           <div className="flex items-center justify-between">
             <h4 className="text-sm font-semibold">{review.userName}</h4>
-            <span className="text-xs text-muted-foreground">
-              {review.date}
-            </span>
+            <span className="text-xs text-muted-foreground">{review.date}</span>
           </div>
           <div className="mt-0.5 flex items-center gap-0.5">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -46,9 +41,7 @@ export function ReviewCard({ review, className }: ReviewCardProps) {
               />
             ))}
           </div>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {review.comment}
-          </p>
+          <p className="mt-2 text-sm text-muted-foreground">{review.comment}</p>
         </div>
       </div>
     </div>

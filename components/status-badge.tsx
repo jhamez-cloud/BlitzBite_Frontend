@@ -1,13 +1,11 @@
 import { cn } from "@/lib/utils"
 import type { OrderStatus } from "@/types"
 
-const statusConfig: Record<
-  OrderStatus,
-  { label: string; color: string }
-> = {
+const statusConfig: Record<OrderStatus, { label: string; color: string }> = {
   pending: {
     label: "Pending",
-    color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400",
+    color:
+      "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400",
   },
   confirmed: {
     label: "Confirmed",
@@ -15,7 +13,8 @@ const statusConfig: Record<
   },
   preparing: {
     label: "Preparing",
-    color: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400",
+    color:
+      "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400",
   },
   ready: {
     label: "Ready",
@@ -23,15 +22,18 @@ const statusConfig: Record<
   },
   picked_up: {
     label: "Picked Up",
-    color: "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400",
+    color:
+      "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400",
   },
   on_the_way: {
     label: "On The Way",
-    color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400",
+    color:
+      "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400",
   },
   delivered: {
     label: "Delivered",
-    color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
+    color:
+      "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
   },
   cancelled: {
     label: "Cancelled",
