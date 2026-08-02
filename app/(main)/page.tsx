@@ -6,7 +6,10 @@ import { PopularMeals } from "@/features/home/popular-meals"
 import { TrendingRestaurants } from "@/features/home/trending-restaurants"
 import { WhyChooseUs } from "@/features/home/why-choose-us"
 import { Testimonials } from "@/features/home/testimonials"
-import { getFeaturedRestaurants, getTrendingRestaurants } from "@/lib/services/restaurant"
+import {
+  getFeaturedRestaurants,
+  getTrendingRestaurants,
+} from "@/lib/services/restaurant"
 import { getPopularMenuItems } from "@/lib/services/menu"
 import { getPromotions } from "@/lib/services/promotion"
 import { getCategories } from "@/lib/services/category"

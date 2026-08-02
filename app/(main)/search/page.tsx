@@ -52,19 +52,19 @@ export default function SearchPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6">
       <div className="relative">
-        <SearchIcon className="absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" />
+        <SearchIcon className="absolute top-1/2 left-4 size-5 -translate-y-1/2 text-muted-foreground" />
         <input
           type="text"
           autoFocus
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for restaurants or food..."
-          className="w-full rounded-2xl border border-border bg-card py-3.5 pl-12 pr-10 text-base outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"
+          className="w-full rounded-2xl border border-border bg-card py-3.5 pr-10 pl-12 text-base transition-colors outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
         />
         {query && (
           <button
             onClick={() => setQuery("")}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+            className="absolute top-1/2 right-4 -translate-y-1/2 text-muted-foreground hover:text-foreground"
           >
             <X className="size-4" />
           </button>

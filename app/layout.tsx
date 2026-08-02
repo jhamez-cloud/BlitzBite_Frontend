@@ -3,7 +3,10 @@ import { Montserrat, Geist_Mono } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { AuthProvider } from "@/hooks/use-auth"
 import { CartProvider } from "@/hooks/use-cart"
+import { ToastProvider } from "@/hooks/use-toast"
+import { Toaster } from "@/components/toaster"
 import { cn } from "@/lib/utils"
 import { SITE_NAME, SITE_DESCRIPTION } from "@/constants/site"
 
@@ -43,7 +46,12 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>
-          <CartProvider>{children}</CartProvider>
+          <AuthProvider>
+            <ToastProvider>
+              <CartProvider>{children}</CartProvider>
+              <Toaster />
+            </ToastProvider>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -2,7 +2,13 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { MapPin, CreditCard, CircleCheck, ArrowRight, ArrowLeft } from "lucide-react"
+import {
+  MapPin,
+  CreditCard,
+  CircleCheck,
+  ArrowRight,
+  ArrowLeft,
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CheckoutStepper } from "@/components/checkout-stepper"
 import { useCart } from "@/hooks/use-cart"
@@ -165,7 +171,7 @@ export default function CheckoutPage() {
                   <span className="text-muted-foreground">Delivery Fee</span>
                   <span>{formatPriceShort(deliveryFee)}</span>
                 </div>
-                <div className="flex justify-between font-semibold text-base pt-2 border-t border-border">
+                <div className="flex justify-between border-t border-border pt-2 text-base font-semibold">
                   <span>Total</span>
                   <span>{formatPriceShort(total)}</span>
                 </div>

@@ -1,10 +1,5 @@
 import Image from "next/image"
-import {
-  Package,
-  DollarSign,
-  Users,
-  Star,
-} from "lucide-react"
+import { Package, DollarSign, Users, Star } from "lucide-react"
 import { StatCard } from "@/components/stat-card"
 import { StatusBadge } from "@/components/status-badge"
 import { formatPriceShort } from "@/constants/site"
@@ -22,17 +17,25 @@ import { getReviews } from "@/lib/services/review"
 export const metadata = { title: "Dashboard" }
 
 export default async function DashboardPage() {
-  const [stats, revenueData, ordersData, topRestaurants, topMeals, topCustomers, orders, reviews] =
-    await Promise.all([
-      getDashboardStats(),
-      getRevenueData(),
-      getOrdersData(),
-      getTopRestaurants(),
-      getTopMeals(),
-      getTopCustomers(),
-      getOrders(),
-      getReviews(),
-    ])
+  const [
+    stats,
+    revenueData,
+    ordersData,
+    topRestaurants,
+    topMeals,
+    topCustomers,
+    orders,
+    reviews,
+  ] = await Promise.all([
+    getDashboardStats(),
+    getRevenueData(),
+    getOrdersData(),
+    getTopRestaurants(),
+    getTopMeals(),
+    getTopCustomers(),
+    getOrders(),
+    getReviews(),
+  ])
 
   return (
     <div className="space-y-6">
@@ -195,10 +198,10 @@ export default async function DashboardPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border text-left text-muted-foreground">
-                <th className="pb-3 pr-4 font-medium">Order</th>
-                <th className="pb-3 pr-4 font-medium">Restaurant</th>
-                <th className="pb-3 pr-4 font-medium">Status</th>
-                <th className="pb-3 pr-4 font-medium">Date</th>
+                <th className="pr-4 pb-3 font-medium">Order</th>
+                <th className="pr-4 pb-3 font-medium">Restaurant</th>
+                <th className="pr-4 pb-3 font-medium">Status</th>
+                <th className="pr-4 pb-3 font-medium">Date</th>
                 <th className="pb-3 text-right font-medium">Total</th>
               </tr>
             </thead>
