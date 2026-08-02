@@ -31,9 +31,7 @@ export function WhyChooseUs() {
   return (
     <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="text-center">
-        <h2 className="text-xl font-bold sm:text-2xl">
-          Why Choose BlitzBite?
-        </h2>
+        <h2 className="text-xl font-bold sm:text-2xl">Why Choose BlitzBite?</h2>
         <p className="mx-auto mt-2 max-w-lg text-muted-foreground">
           We make food delivery simple, fast, and reliable.
         </p>

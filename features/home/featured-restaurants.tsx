@@ -7,15 +7,11 @@ interface FeaturedRestaurantsProps {
   restaurants: Restaurant[]
 }
 
-export function FeaturedRestaurants({
-  restaurants,
-}: FeaturedRestaurantsProps) {
+export function FeaturedRestaurants({ restaurants }: FeaturedRestaurantsProps) {
   return (
     <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-bold sm:text-2xl">
-          Featured Restaurants
-        </h2>
+        <h2 className="text-xl font-bold sm:text-2xl">Featured Restaurants</h2>
         <Link
           href="/restaurants"
           className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"

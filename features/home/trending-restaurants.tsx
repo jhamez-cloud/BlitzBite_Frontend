@@ -7,9 +7,7 @@ interface TrendingRestaurantsProps {
   restaurants: Restaurant[]
 }
 
-export function TrendingRestaurants({
-  restaurants,
-}: TrendingRestaurantsProps) {
+export function TrendingRestaurants({ restaurants }: TrendingRestaurantsProps) {
   return (
     <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-between">
@@ -22,7 +20,7 @@ export function TrendingRestaurants({
           <ChevronRight className="size-4" />
         </Link>
       </div>
-      <div className="mt-4 flex gap-4 overflow-x-auto pb-2 scrollbar-none">
+      <div className="mt-4 flex scrollbar-none gap-4 overflow-x-auto pb-2">
         {restaurants.map((restaurant) => (
           <RestaurantCard
             key={restaurant.id}

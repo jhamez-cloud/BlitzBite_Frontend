@@ -24,11 +24,7 @@ export function PopularMeals({ meals }: PopularMealsProps) {
       </div>
       <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {meals.slice(0, 8).map((meal) => (
-          <FoodCard
-            key={meal.id}
-            item={meal}
-            onCardClick={() => {}}
-          />
+          <FoodCard key={meal.id} item={meal} onCardClick={() => {}} />
         ))}
       </div>
     </section>
