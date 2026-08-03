@@ -6,10 +6,11 @@ import { useRouter } from "next/navigation"
 import { Loader2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { useAuth } from "@/hooks/use-auth"
+import { useAdminAuth } from "@/hooks/use-admin-auth"
 
-interface SignupValues {
+interface AdminSignupValues {
   name: string
+  restaurantName: string
   email: string
   password: string
 }
@@ -17,40 +18,50 @@ interface SignupValues {
 const inputClass =
   "w-full rounded-xl border border-border bg-card px-3 py-2 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"
 
-export function SignupForm({ next }: { next: string }) {
+export function AdminSignupForm({ next }: { next: string }) {
   const router = useRouter()
-  const { signup } = useAuth()
+  const { signup } = useAdminAuth()
   const [formError, setFormError] = useState<string | null>(null)
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<SignupValues>({
-    defaultValues: { name: "", email: "", password: "" },
+  } = useForm<AdminSignupValues>({
+    defaultValues: { name: "", restaurantName: "", email: "", password: "" },
   })
 
   const onSubmit = handleSubmit((values) => {
     setFormError(null)
-    const result = signup(values.name, values.email, values.password)
+    const result = signup(
+      values.name,
+      values.email,
+      values.password,
+      values.restaurantName
+    )
     if (!result.ok) {
       setFormError(result.error ?? "Something went wrong.")
       return
     }
-    // Signup does not auto-login — send to login with a success flag.
-    router.push(`/login?next=${encodeURIComponent(next)}&created=1`)
+    // Signup does not auto-login — send to login (admin mode) with a flag.
+    const params = new URLSearchParams({
+      role: "admin",
+      next,
+      created: "1",
+    })
+    router.push(`/login?${params.toString()}`)
   })
 
   return (
     <form onSubmit={onSubmit} className="space-y-4" noValidate>
       <div className="space-y-1.5">
-        <label htmlFor="name" className="text-sm font-medium">
-          Full name
+        <label htmlFor="admin-name" className="text-sm font-medium">
+          Your name
         </label>
         <input
-          id="name"
+          id="admin-name"
           type="text"
           autoComplete="name"
-          placeholder="Ama Serwaa"
+          placeholder="Kwame Mensah"
           className={cn(inputClass, errors.name && "border-destructive")}
           {...register("name", { required: "Name is required" })}
         />
@@ -60,14 +71,38 @@ export function SignupForm({ next }: { next: string }) {
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="email" className="text-sm font-medium">
+        <label htmlFor="admin-restaurant" className="text-sm font-medium">
+          Restaurant name
+        </label>
+        <input
+          id="admin-restaurant"
+          type="text"
+          autoComplete="organization"
+          placeholder="Mensah's Kitchen"
+          className={cn(
+            inputClass,
+            errors.restaurantName && "border-destructive"
+          )}
+          {...register("restaurantName", {
+            required: "Restaurant name is required",
+          })}
+        />
+        {errors.restaurantName && (
+          <p className="text-xs text-destructive">
+            {errors.restaurantName.message}
+          </p>
+        )}
+      </div>
+
+      <div className="space-y-1.5">
+        <label htmlFor="admin-email" className="text-sm font-medium">
           Email
         </label>
         <input
-          id="email"
+          id="admin-email"
           type="email"
           autoComplete="email"
-          placeholder="you@email.com"
+          placeholder="owner@restaurant.com"
           className={cn(inputClass, errors.email && "border-destructive")}
           {...register("email", {
             required: "Email is required",
@@ -83,11 +118,11 @@ export function SignupForm({ next }: { next: string }) {
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="password" className="text-sm font-medium">
+        <label htmlFor="admin-password" className="text-sm font-medium">
           Password
         </label>
         <input
-          id="password"
+          id="admin-password"
           type="password"
           autoComplete="new-password"
           placeholder="At least 6 characters"
@@ -118,7 +153,7 @@ export function SignupForm({ next }: { next: string }) {
         disabled={isSubmitting}
       >
         {isSubmitting && <Loader2 className="size-4 animate-spin" />}
-        Create account
+        Create restaurant account
       </Button>
     </form>
   )
