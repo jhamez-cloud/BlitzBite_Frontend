@@ -33,12 +33,12 @@ export const mobileNavLinks = [
 ]
 
 export const profileMenuLinks = [
-  { label: "My Profile", href: "/profile", icon: User },
-  { label: "My Orders", href: "/orders", icon: ClipboardList },
-  { label: "Favorites", href: "/favorites", icon: Heart },
-  { label: "Notifications", href: "/notifications", icon: Bell },
-  { label: "Wallet", href: "/profile", icon: Wallet },
-  { label: "Coupons", href: "/coupons", icon: TicketPercent },
+  { id:"profile", label: "My Profile", href: "/profile", icon: User },
+  { id: "orders", label: "My Orders", href: "/orders", icon: ClipboardList },
+  { id: "favorites", label: "Favorites", href: "/favorites", icon: Heart },
+  { id: "notifications", label: "Notifications", href: "/notifications", icon: Bell },
+  { id: "wallet", label: "Wallet", href: "/profile", icon: Wallet },
+  { id: "coupons", label: "Coupons", href: "/coupons", icon: TicketPercent },
 ]
 
 export const dashboardNavLinks = [

@@ -1,19 +1,8 @@
-"use client"
-
 import Link from "next/link"
 import { Zap } from "lucide-react"
 import { SITE_NAME } from "@/constants/site"
-import { DEMO_ACCOUNT } from "@/lib/services/auth"
 
-export function AuthShell({
-  title,
-  subtitle,
-  children,
-}: {
-  title: string
-  subtitle: string
-  children: React.ReactNode
-}) {
+export function AuthShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative flex min-h-[calc(100svh-4rem)] items-center justify-center overflow-hidden px-4 py-10">
       {/* Blurred decorative backdrop */}
@@ -35,20 +24,7 @@ export function AuthShell({
           {SITE_NAME}
         </Link>
 
-        <div className="mt-6 text-center">
-          <h1 className="text-2xl font-bold">{title}</h1>
-          <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>
-        </div>
-
-        <div className="mt-6">{children}</div>
-
-        {/* Demo credentials hint */}
-        <div className="mt-6 rounded-xl border border-dashed border-border bg-muted/40 p-3 text-center text-xs text-muted-foreground">
-          <p className="font-semibold text-foreground">Demo credentials</p>
-          <p className="mt-1">
-            {DEMO_ACCOUNT.email} · {DEMO_ACCOUNT.password}
-          </p>
-        </div>
+        {children}
       </div>
     </div>
   )
