@@ -1,27 +1,25 @@
 import { AuthShell } from "@/components/auth/auth-shell"
-import { LoginForm } from "@/features/auth/login-form"
+import { AuthPanel } from "@/features/auth/auth-panel"
 
 export const metadata = { title: "Sign in" }
 
 export default async function LoginPage({
   searchParams,
 }: {
-  searchParams: Promise<{ next?: string; created?: string }>
+  searchParams: Promise<{ next?: string; created?: string; role?: string }>
 }) {
-  const { next, created } = await searchParams
+  const { next, created, role } = await searchParams
   const target = next && next.startsWith("/") ? next : "/"
+  const initialRole = role === "admin" ? "admin" : "user"
 
   return (
-    <AuthShell
-      title="Welcome back"
-      subtitle="Sign in to your account to continue"
-    >
-      {created && (
-        <p className="mb-4 rounded-xl bg-primary/10 px-3 py-2 text-center text-sm font-medium text-primary">
-          Account created — please sign in.
-        </p>
-      )}
-      <LoginForm next={target} />
+    <AuthShell>
+      <AuthPanel
+        next={target}
+        initialRole={initialRole}
+        initialMode="login"
+        showCreated={Boolean(created)}
+      />
     </AuthShell>
   )
 }

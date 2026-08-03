@@ -1,22 +1,20 @@
 import { AuthShell } from "@/components/auth/auth-shell"
-import { SignupForm } from "@/features/auth/signup-form"
+import { AuthPanel } from "@/features/auth/auth-panel"
 
 export const metadata = { title: "Create account" }
 
 export default async function SignupPage({
   searchParams,
 }: {
-  searchParams: Promise<{ next?: string }>
+  searchParams: Promise<{ next?: string; role?: string }>
 }) {
-  const { next } = await searchParams
+  const { next, role } = await searchParams
   const target = next && next.startsWith("/") ? next : "/"
+  const initialRole = role === "admin" ? "admin" : "user"
 
   return (
-    <AuthShell
-      title="Get started"
-      subtitle="Create your account to order in seconds"
-    >
-      <SignupForm next={target} />
+    <AuthShell>
+      <AuthPanel next={target} initialRole={initialRole} initialMode="signup" />
     </AuthShell>
   )
 }
