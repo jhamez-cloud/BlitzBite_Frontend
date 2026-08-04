@@ -77,12 +77,12 @@ export function UserMenu() {
           {profileMenuLinks.map((link) => {
             const Icon = link.icon
             return (
-              <DropdownMenu.Item key={link.href} asChild>
+              <DropdownMenu.Item key={link.id} asChild>
                 <Link
                   href={link.href}
                   className={cn(
                     "flex cursor-pointer items-center gap-2.5 rounded-lg px-2 py-2 text-sm transition-colors outline-none",
-                    "focus:bg-muted data-[highlighted]:bg-muted"
+                    "focus:bg-muted data-highlighted:bg-muted"
                   )}
                 >
                   <Icon className="size-4 text-muted-foreground" />
@@ -95,7 +95,7 @@ export function UserMenu() {
           <DropdownMenu.Separator className="my-1 h-px bg-border" />
           <DropdownMenu.Item
             onSelect={() => logout()}
-            className="flex cursor-pointer items-center gap-2.5 rounded-lg px-2 py-2 text-sm text-destructive transition-colors outline-none focus:bg-destructive/10 data-[highlighted]:bg-destructive/10"
+            className="flex cursor-pointer items-center gap-2.5 rounded-lg px-2 py-2 text-sm text-destructive transition-colors outline-none focus:bg-destructive/10 data-highlighted:bg-destructive/10"
           >
             <LogOut className="size-4" />
             Sign out
