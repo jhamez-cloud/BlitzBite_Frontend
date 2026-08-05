@@ -527,4 +527,85 @@ export const menuItems: MenuItem[] = [
     isPopular: false,
     addons: [{ id: 45, name: "Extra Sauce", price: 5 }],
   },
+
+  // Mensah's Kitchen (restaurantId: 99) — the demo owner's restaurant
+  {
+    id: 32,
+    restaurantId: 99,
+    name: "Jollof Rice & Chicken",
+    description:
+      "Aromatic jollof rice served with perfectly seasoned grilled chicken and shito",
+    price: 60,
+    image:
+      "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=300&fit=crop",
+    category: "Popular",
+    available: true,
+    calories: 580,
+    isPopular: true,
+    addons: [
+      { id: 46, name: "Extra Chicken", price: 20 },
+      { id: 47, name: "Plantain", price: 10 },
+    ],
+  },
+  {
+    id: 33,
+    restaurantId: 99,
+    name: "Waakye Special",
+    description:
+      "Rice and beans with stew, shito, spaghetti, and protein of choice",
+    price: 45,
+    image:
+      "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=400&h=300&fit=crop",
+    category: "Local Favorites",
+    available: true,
+    calories: 620,
+    isPopular: true,
+    addons: [
+      { id: 48, name: "Fish", price: 15 },
+      { id: 49, name: "Egg", price: 8 },
+    ],
+  },
+  {
+    id: 34,
+    restaurantId: 99,
+    name: "Kelewele",
+    description: "Spicy fried ripe plantain cubes with roasted peanuts",
+    price: 20,
+    image:
+      "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop",
+    category: "Sides",
+    available: true,
+    calories: 280,
+    isPopular: false,
+    addons: [],
+  },
+  {
+    id: 35,
+    restaurantId: 99,
+    name: "Fufu & Light Soup",
+    description: "Smooth pounded fufu with rich light soup and choice of meat",
+    price: 55,
+    image:
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop",
+    category: "Local Favorites",
+    available: true,
+    calories: 500,
+    isPopular: true,
+    addons: [{ id: 50, name: "Extra Meat", price: 20 }],
+  },
+  {
+    id: 36,
+    restaurantId: 99,
+    name: "Grilled Tilapia & Banku",
+    description:
+      "Traditional banku with grilled tilapia, pepper sauce and fresh shito",
+    price: 70,
+    image:
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop",
+    category: "Popular",
+    available: true,
+    calories: 600,
+    isPopular: true,
+    addons: [{ id: 51, name: "Extra Fish", price: 30 }],
+  },
 ]

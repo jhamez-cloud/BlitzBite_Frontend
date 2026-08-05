@@ -30,3 +30,24 @@ export interface TopCustomer {
   orders: number
   totalSpent: number
 }
+
+export interface DashboardCustomer {
+  id: number
+  name: string
+  email: string
+  phone: string
+  avatar: string
+  location: string
+  joinedDate: string
+  totalOrders: number
+  totalSpent: number
+  favoriteRestaurants: number[]
+  status: "active" | "suspended"
+}
+
+export interface OwnerPreferences {
+  newOrderNotifications: boolean
+  lowStockAlerts: boolean
+  marketingEmails: boolean
+  autoAcceptOrders: boolean
+}
