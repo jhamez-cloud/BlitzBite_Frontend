@@ -120,6 +120,42 @@ export const reviews: Review[] = [
       "Food was decent but packaging could be better. The fried rice was good though.",
     date: "2 weeks ago",
   },
+  {
+    id: 11,
+    userId: 11,
+    userName: "Maame Serwaah",
+    userAvatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+    restaurantId: 99,
+    rating: 5,
+    comment:
+      "The jollof is incredible — it tastes just like home! Portions are generous too.",
+    date: "1 day ago",
+  },
+  {
+    id: 12,
+    userId: 12,
+    userName: "Kwabena Osei",
+    userAvatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+    restaurantId: 99,
+    rating: 4,
+    comment:
+      "Waakye was excellent and the delivery was quick. Will definitely order again.",
+    date: "3 days ago",
+  },
+  {
+    id: 13,
+    userId: 13,
+    userName: "Adwoa Sarpong",
+    userAvatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+    restaurantId: 99,
+    rating: 5,
+    comment:
+      "Best fufu and light soup outside my mother's kitchen! The shito is divine.",
+    date: "5 days ago",
+  },
 ]
 
 export const reviewSummary: ReviewSummary = {
